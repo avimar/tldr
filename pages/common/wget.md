@@ -7,6 +7,10 @@
 
 `wget {{https://example.com/foo}}`
 
+- Download the contents of an URL to a specific filename:
+
+`wget -O {{filename} {{https://example.com/foo}}`
+
 - Download a single web page and all its resources (scripts, stylesheets, images, etc.):
 
 `wget --page-requisites --convert-links {{https://example.com/somepage.html}}`
@@ -30,3 +34,7 @@
 - Retry a given number of times if the download doesn't succeed at first:
 
 `wget -t {{number_of_retries}} {{https://example.com}}`
+
+- Download only using IPv4 if IPv6 DNS is broken:
+
+`wget -4 {{https://example.com}}`
